@@ -155,13 +155,10 @@
 
         <div class="content-wrapper">
             <div class="content">
-<<<<<<< HEAD
 
                <a href="{{route('register')}}" class="btn btn-sm btn-success float-right">register</a>
                 <a href="{{ route('login') }}" class="btn btn-sm btn-danger float-right">login</a>
                 <a href="{{ route('logout') }}" class="btn btn-sm btn-danger float-right">logout</a>
-=======
->>>>>>> main
                 <div class="container-fluid pt-3">
                     <div class="row">
                         <div class="col-sm-12 pre_space">
