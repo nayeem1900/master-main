@@ -3,7 +3,11 @@
 use App\Http\Controllers\MenuController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
 use App\Http\Controllers\Api\Backend\UserController;
+=======
+
+>>>>>>> main
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -27,7 +31,10 @@ Route::middleware(['auth:sanctum' => 'auth', 'domain'])->group(function () {
     Route::get('/menus', [MenuController::class, "index"])->name('menus');   
 });
 
+<<<<<<< HEAD
 
 //Test API
 Route::get('test', [UserController::class, 'store']);
 Route::post('test', [UserController::class, 'store']);
+=======
+>>>>>>> main

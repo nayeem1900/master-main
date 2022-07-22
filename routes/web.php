@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
 use App\Http\Controllers\Frontend\UserController;
+=======
+>>>>>>> main
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +24,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+<<<<<<< HEAD
 Route::middleware(['middleware' => 'auth'])->group(function () {
     // return view('home');
 
@@ -35,4 +39,13 @@ Route::post('login', [UserController::class, 'userLogin'])->name('user.login');
 
 
 
+=======
+Route::middleware(['middleware' => 'auth', 'domain'])->group(function () {
+    // return view('home');
+    Route::view('/home/{path?}', 'home')->where('/home', '.*');
+    Route::view('/home', 'home')->where('/home', '.*');
+    
+});
+
+>>>>>>> main
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

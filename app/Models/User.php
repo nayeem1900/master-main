@@ -21,8 +21,11 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+<<<<<<< HEAD
         'unique_id',
         'extend_props',
+=======
+>>>>>>> main
     ];
 
     /**

@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 ddddddddddd
 
 {{--
+=======
+>>>>>>> main
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,4 +56,7 @@ ddddddddddd
 </body>
 
 </html>
+<<<<<<< HEAD
 --}}
+=======
+>>>>>>> main

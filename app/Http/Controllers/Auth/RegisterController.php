@@ -6,7 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
+=======
+>>>>>>> main
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -65,6 +68,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+<<<<<<< HEAD
         $unique_id=rand(0000,9999);
 
       /*  dd($unique_id);*/
@@ -74,6 +78,11 @@ class RegisterController extends Controller
             'unique_id' => $unique_id,
             'description' => '',
             'status' => 1,
+=======
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+>>>>>>> main
             'password' => Hash::make($data['password']),
         ]);
     }
