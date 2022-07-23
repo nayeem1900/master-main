@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Api\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Api\UserExtend;
-use App\Models\Model\User_extends_props;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Nette\Utils\Random;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -16,6 +16,29 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function login(Request $request){
+
+        // return Validator::make($request->all(), [
+        //     'email' => ['required', 'string', 'max:255'],
+        //     'password' => ['required'],
+        // ]);
+
+
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+            // Authentication passed...
+
+            $user = Auth::user();
+            return $request->user()->createToken('Access Token')->accessToken;
+
+            return $token = $user->createToken('access')->accessToken;
+   
+         }
+
+         return "Unathorize";
+      
+
+    }
+
     public function index()
     {
         //
