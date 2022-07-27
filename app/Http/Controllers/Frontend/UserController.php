@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -32,8 +33,16 @@ class UserController extends Controller
      *
      */
     public function userLogin(Request $request){
-//       dd($request->all());
-     return view('welcome');
+    
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+
+            return redirect('/');
+           
+         }
+
+         return back()->withInput();
+
+     
     }
 
 
